@@ -5,6 +5,9 @@ on:
       - develop
 jobs:
   check-application:
+    strategy:
+      matrix:
+        go: ["1.14", "1.15"]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2 ## faz o git checkout para a maquina ubuntu
